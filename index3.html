@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Organic Farming</title>
+    <meta name="keywords" content="organic farm, organic products, green energy, sustainable farming, farm-fresh produce, chemical-free vegetables, eco-friendly agriculture, renewable energy farm, local organic food, CSA, farm-to-table, natural farming, pesticide-free, non-GMO, solar-powered farm">
+    <meta name="description" content="Discover fresh organic products from our sustainable farm powered by green energy. We offer chemical-free vegetables, fruits, and farm-fresh produce using eco-friendly farming practices.">
+    <meta name="author" content="Btm Qspiders">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0;
+}
+
+/* home */
+.home{
+    height: 100vh; width: 100%;
+    background-color: cornflowerblue;
+    background: url("https://trial.ovationthemes.com/agriculture-farming/wp-content/themes/agriculture-farming-pro/assets/images/slides/slide.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* display: flex; */
+    /* align-items: center; */
+}
+.home section{
+    height: 120px; width: 85%;
+    /* background-color: aliceblue; */
+    margin: auto;
+}
+section>header{
+    width: 100%; height: 35%;
+    background-color: rgba(78, 78, 78, 0.352);
+    backdrop-filter: blur(30px);
+    color: #fff ;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+header .header-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    a{
+        display: flex;
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+        align-items: center;
+    }
+    p{
+        margin: 0;
+    }
+}
+
+section nav{
+    height: 65%; width: 100%;
+    background-color: limegreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .nav-items{
+    width: 50%;
+    /* background-color: aliceblue; */
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+    }
+    a:hover i.fa-angle-down{
+        transform: rotate(180deg);
+        transition: all .3s ease-in-out;
+    }
+    a:hover{
+        transform: scale(1.1);
+        transition: all .3s ease-in-out;
+    }
+    a:hover i.fa-cart-plus{
+        transform: scale(1.1);
+        transition: all .3s ease-in-out;
+    }
+    i{
+        transition: all .3s ease-in-out;
+        display: inline-block;
+    }
+}
+
+/* hero content */
+.hero-content{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 80%;
+    max-width: 800px;
+}
+.hero-content h1{
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.hero-content h1 span{
+    color: #8ec63f;
+    font-size: 80px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+}
+.hero-content p{
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 30px;
+    font-family: 'Source Sans 3', sans-serif;
+    
+    
+}
+.hero-content .hero-btn{
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: limegreen;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+}
+.hero-content .hero-btn:hover{
+    /* background: #32cd32; */
+    color: blue;
+    transform: translateY(-3px);
+    text-decoration: underline;
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); */
+}
+.hero-content .hero-btn i{
+    margin-left: 8px;
+}
+
+
+.product{
+    min-height: 100vh; max-width: 100%;
+}
+.product-program{
+    background-color: #f8f8f5;
+    padding: 80px 5%;
+    text-align: center;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+.product-program h2{
+    font-size: 40px;
+    margin-bottom: 60px;
+    color: #222;
+    line-height: 1.3;
+}
+
+.program-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.program-card{
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.program-card:hover{
+    transform: translateY(-10px);
+}
+
+.program-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.program-card h3{
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.program-card p{
+    font-size: 15px;
+    color: #666;
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+
+.program-card a{
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #8ec63f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.program-card a:hover{
+    background-color: #6fae2f;
+}
+
+.featued-program{
+    background-color: #8ec63f;
+}
+.product-category{
+    background-color: aquamarine;
+}
+.prduct-bestseller{
+    background-color: #fff;
+}
+
+.recentblogs{
+    min-height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.sub-title{
+    color: #8ec63f;
+    font-size: 2.5rem;
+    margin-top: 15px;
+}
+
+.recentblogs .allBlogs{
+    height: 100%; width: 85%;
+    background-color: #fff;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.blog{
+    width: 100%; height: 100vh;
+   
+}
+.blog-text i{
+    align-items: center;
+    font-size: large;
+    margin: 10px;
+    padding: 10px;
+    top: 89px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="home">
+        <section>
+            <header>
+                <div class="header-item">
+                    <a href="mailto:info@organicfarming.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>info@organicfarming.com</p>
+                    </a>
+                </div>
+                <div class="header-item">
+                    <a href="tel:123-456-7890">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>123-456-7890</p>
+                    </a>
+                </div>
+                <div class="header-item">
+                    <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                </div>
+            </header>
+            <nav>
+                <img src="leaf.png" alt="Organic Farm Logo">
+                <div class="nav-items">
+                    <a href="#home">Home</a>
+                    <a href="#blog">Blog <i class="fas fa-angle-down"></i></a>
+                    <a href="#pages">Pages <i class="fas fa-angle-down"></i></a>
+                    <a href="#contact">Contact</a>
+                    <a href="#buy">Buy Now <i class="fas fa-cart-plus"></i></a>
+                </div>
+            </nav>
+        </section>
+    </div>
+    <div class="hero">
+        <div class="hero-content">
+            <h1><span>Organic</span> food delivery</h1>
+            <p>Fresh, organic ingredients. Healthy, chef-crafted recipes.Right at <br>your doorstep.</p>
+            <a href="#read more" class="hero-btn">Read More</a>
+        </div>
+    </div>
+    
+    <div class="product-program product">
+    <h2>Choose your program below<br>to see how we can help</h2>
+
+    <div class="program-cards">
+
+        <div class="program-card">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999" alt="Nutrition">
+            <h3>Nutrition Strategies</h3>
+            <p>
+                Chickweed okra pea winter purslane coriander yarrow sweet.
+            </p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="program-card">
+            <img src="https://images.unsplash.com/photo-1505253213348-ce9c018df36d" alt="Certification">
+            <h3>Certification Courses</h3>
+            <p>
+                Soko radicchio bunya nuts gram dulse silver beet parsnip napa.
+            </p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="program-card">
+            <img src="https://images.unsplash.com/photo-1524863479829-916d8e77f114" alt="Women Coaching">
+            <h3>Women's Coaching</h3>
+            <p>
+                Grape silver beet watercress potato tigernut corn groundnut.
+            </p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="program-card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Men Coaching">
+            <h3>Men's Coaching</h3>
+            <p>
+                Sea lettuce water spinach gram fava bean leek dandelion silver.
+            </p>
+            <a href="#">Read More</a>
+        </div>
+
+    </div>
+</div>
+
+    </div>
+    <div class="featued-program product"></div>
+    <div class="product-category product"></div>
+    <div class="product-bestseller product"></div>
+    <div class="recentblogs product">
+        <h2 class="sub-title">Recent Blogs</h2>
+        <img src="blogg4.png" alt="">
+        <div class="allBlogs">
+            <div class="blog">
+                <img src="blog.png" alt="">
+                <div class="blog-text">
+                    <h>qui blanditiis praesentaiusm voluptatum deleniti atque</h1>
+                    <i class="fas fa-user"> Demo_Admin</i> <i class="fas fa-comment"> Comments</i> 
+                </div>    
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
